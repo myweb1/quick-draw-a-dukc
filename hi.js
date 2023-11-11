@@ -11,6 +11,9 @@ function draw() {
     if (mouseIsPressed) {
         line(pmouseX,pmouseY,mouseX,mouseY)
     }
+    if (puntos>=10) {
+        document.getElementById("congratulations").innerHTML = "CONGRATULATIONS!!"
+    }
 }
 
 function clasifie() {
@@ -32,6 +35,9 @@ function respond(road,result) {
             ask()
             
         }
+    }
+    if (puntos>=10) {
+        document.getElementById("congratulations").innerHTML = "CONGRATULATIONS!!"
     }
 }
 function fino() {
@@ -58,4 +64,8 @@ function ask() {
     clearInterval(reloj)
     reloj = setInterval(timetime,1000)
     
+}
+
+function interesante() {
+    puntos += 5
 }
